@@ -11,7 +11,7 @@ Audit your own computer, prove the fix, and export a submission-ready report.
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen?style=for-the-badge)
 ![Read-only](https://img.shields.io/badge/commands-read--only-critical?style=for-the-badge)
 
-**Project 4 · System Vulnerability Checklist** · DecodeLabs Cyber Security Internship, Batch 2026
+** System Vulnerability Checklist** ·
 
 <img src="docs/screenshot.png" alt="Audit Desk overview" width="820">
 
@@ -213,22 +213,7 @@ npm test         # Node 18+, uses the built-in test runner
 └── .github/workflows/pages.yml
 ```
 
-## Deployment
 
-The workflow in `.github/workflows/pages.yml` runs the tests, then publishes only the site files (`index.html`, `assets/`, `scripts/`, `docs/`) to GitHub Pages.
-
-1. Push to the `main` branch.
-2. In the repository go to **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Open the **Actions** tab and confirm both jobs (`Run tests`, `Deploy to Pages`) are green.
-4. Your site is live at `https://shadow-exe64.github.io/audit-desk/`.
-
-> **Note:** GitHub Pages on a private repository needs a paid plan. Keep the repository public for a free live demo.
-
-## Roadmap
-
-- [ ] Real CVSS 4.0 vector calculator for each finding
-- [ ] More OS-specific checks (Linux SELinux / AppArmor, mobile devices)
-- [ ] Multi-device audits with a comparison view
 
 ## License
 
