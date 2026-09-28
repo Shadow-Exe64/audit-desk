@@ -1,6 +1,6 @@
 <div align="center">
 
-#PROJECT 4 BY DECODE LABS 🛡️ Audit Desk
+#🛡️ Audit Desk
 
 **An interactive system vulnerability checklist with severity-weighted risk scoring and a one-page report generator.**
 Audit your own computer, prove the fix, and export a submission-ready report.
