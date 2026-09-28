@@ -1,0 +1,8 @@
+{
+  "name": "audit-desk",
+  "version": "1.0.0",
+  "description": "Audit Desk: an interactive system vulnerability checklist with risk scoring and a one-page report generator.",
+  "scripts": { "test": "node --test", "start": "python3 -m http.server 8080" },
+  "license": "MIT",
+  "private": true
+}

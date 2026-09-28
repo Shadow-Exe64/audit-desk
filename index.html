@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audit Desk — System Vulnerability Checklist</title>
+  <meta name="description" content="Audit your own computer in four steps, score the risks by severity, and generate a one-page vulnerability report with remediation and proof. Runs entirely in your browser.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3l11 4v8c0 7-4.5 12-11 14C9.5 27 5 22 5 15V7z' fill='%230a7c73'/%3E%3Cpath d='m11 16 3.5 3.5L21.5 12' fill='none' stroke='%23fff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Onest:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>try{const t=localStorage.getItem('auditdesk.theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#overview" aria-label="Audit Desk home">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.5 12-11 14C9.5 27 5 22 5 15V7z" fill="var(--accent)"/><path d="m11 16 3.5 3.5L21.5 12" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Audit Desk</span>
+      </a>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab" role="tab" data-view="overview" id="t-overview" aria-selected="true">Overview</button>
+        <button class="tab" role="tab" data-view="checklist" id="t-checklist" aria-selected="false" tabindex="-1">Checklist</button>
+        <button class="tab" role="tab" data-view="toolkit" id="t-toolkit" aria-selected="false" tabindex="-1">Toolkit</button>
+        <button class="tab" role="tab" data-view="report" id="t-report" aria-selected="false" tabindex="-1">Report</button>
+      </nav>
+      <span class="badge info" id="top-chip" title="Security posture, severity-weighted">Posture —</span>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="v-overview" role="tabpanel" aria-labelledby="t-overview"></section>
+    <section id="v-checklist" role="tabpanel" aria-labelledby="t-checklist" hidden></section>
+    <section id="v-toolkit" role="tabpanel" aria-labelledby="t-toolkit" hidden></section>
+    <section id="v-report" role="tabpanel" aria-labelledby="t-report" hidden></section>
+  </main>
+
+  <footer class="footer no-print">
+    <div class="container">
+      <p class="muted small" style="margin:0">Audit Desk is a learning project for the DecodeLabs Cyber Security internship (Project 4). Severity values are indicative ratings on the CVSS qualitative scale, not calculated CVSS vectors. Audit only machines you own or are authorised to assess. All data stays in your browser.</p>
+    </div>
+  </footer>
+
+  <div class="toast-region" id="toasts" aria-live="polite"></div>
+
+  <script src="assets/js/checks.js"></script>
+  <script src="assets/js/scoring.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
